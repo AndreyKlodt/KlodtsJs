@@ -151,6 +151,7 @@ function postData(form) {
 }
 
 // Burger 
+
 const burger = document.querySelector(".header__burger-wrapper"),
   burgerSpan = document.querySelector(".header__burger"),
   headerMenu = document.querySelector(".header__nav");
@@ -160,12 +161,9 @@ burger.addEventListener("click", () => {
     burgerSpan.classList.toggle("active");
     document.body.classList.toggle("active");
     headerMenu.classList.toggle("active");
-
-  }, 300);
+  }, 500);
 
 });
-
-
 // Slider
 // Получаем элементы
 

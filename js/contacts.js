@@ -19,11 +19,7 @@ burger.addEventListener("click", () => {
   }, 500);
 
 });
-
-
-
 //forms 
-
 const successModal = document.querySelector(".success-modal"),
   modalClose = document.querySelectorAll(".modal-dialog__close");
 
@@ -62,42 +58,3 @@ function callModal(modalName) {
 }
 
 
-
-const forms = document.querySelectorAll('form');
-const message = {
-  loading: 'img/form/spinner.svg',
-  success: 'Спасибо! Скоро мы с вами свяжемся',
-  failure: 'Что-то пошло не так...'
-};
-
-forms.forEach(item => {
-  postData(item);
-});
-
-
-function postData(form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    showModal(successModal);
-    const request = new XMLHttpRequest();
-    request.open('POST', 'server.php');
-    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    const formData = new FormData(form);
-
-    const object = {};
-    formData.forEach(function (value, key) {
-      object[key] = value;
-    });
-    const json = JSON.stringify(object);
-
-    request.send(json);
-    form.reset();
-
-    request.addEventListener('load', () => {
-      if (request.status === 200) {
-        console.log(request.response);
-      } else {
-      }
-    });
-  });
-}
