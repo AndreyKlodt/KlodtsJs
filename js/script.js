@@ -1,4 +1,5 @@
 "use strict";
+
 window.onload = function () {
   document.body.classList.add('loaded_hiding');
   window.setTimeout(function () {
@@ -6,6 +7,13 @@ window.onload = function () {
     document.body.classList.remove('loaded_hiding');
   }, 500);
 };
+setTimeout(() => {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+}, 4000);
 
 
 // Получаем DOM элементы
