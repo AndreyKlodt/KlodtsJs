@@ -58,9 +58,7 @@ function hidePictures(index) {
 
 // Modals
 
-const makeOrderBtn = document.querySelectorAll(".order-btn"),
-  modalOrder = document.querySelector("[data-modalOrder]"),
-  tabslCode = document.querySelector(".tabsCode"),
+const tabslCode = document.querySelector(".tabsCode"),
   tabsCodeBtn = document.querySelector("#tabs__code-btn"),
   modalClose = document.querySelectorAll(".modal-dialog__close"),
   // Slider 
@@ -105,58 +103,11 @@ function callModal(modalName) {
   });
 }
 
-makeOrderBtn.forEach(elem => {
-  elem.addEventListener("click", () => showModal(modalOrder));
-});
 
 sliderCodeBtn.addEventListener("click", () => showModal(sliderCode));
 timerCodeBtn.addEventListener("click", () => showModal(timerCode));
 tabsCodeBtn.addEventListener("click", () => showModal(tabslCode));
 
-// Forms and Success Modal
-
-
-const forms = document.querySelectorAll('form'),
-  successModal = document.querySelector(".success-modal");
-
-// const message = {
-//   loading: 'img/form/spinner.svg',
-//   success: 'Спасибо! Скоро мы с вами свяжемся',
-//   failure: 'Что-то пошло не так...'
-// };
-
-
-forms.forEach(item => {
-  postData(item);
-});
-
-function postData(form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    hideModal(modalOrder);
-    showModal(successModal);
-    const request = new XMLHttpRequest();
-    request.open('POST', 'server.php');
-    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    const formData = new FormData(form);
-
-    const object = {};
-    formData.forEach(function (value, key) {
-      object[key] = value;
-    });
-    const json = JSON.stringify(object);
-
-    request.send(json);
-    form.reset();
-
-    request.addEventListener('load', () => {
-      if (request.status === 200) {
-        console.log(request.response);
-      } else {
-      }
-    });
-  });
-}
 
 // Burger 
 

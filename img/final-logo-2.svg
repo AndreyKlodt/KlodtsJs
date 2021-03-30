@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 325 116" style="enable-background:new 0 0 325 116;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'TimesNewRomanPS-BoldMT';}
+	.st3{font-size:36px;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<rect x="0.5" y="0.5" width="324" height="115"/>
+		<path d="M324,1v114H1V1H324 M325,0H0v116h325V0L325,0z"/>
+	</g>
+	<rect x="48.3" y="43" class="st0" width="145.7" height="45.7"/>
+	<text transform="matrix(1 0 0 1 48.3335 66.8677)" class="st1 st2 st3">Andrey</text>
+	<rect x="173.3" y="43" class="st0" width="110.7" height="45.7"/>
+	<text transform="matrix(1 0 0 1 173.3335 66.8677)" class="st1 st2 st3">Klødt</text>
+	<rect x="29" y="7.5" class="st4" width="273.5" height="86"/>
+	<rect x="18.5" y="15.5" class="st4" width="273" height="86"/>
+</g>
+</svg>
